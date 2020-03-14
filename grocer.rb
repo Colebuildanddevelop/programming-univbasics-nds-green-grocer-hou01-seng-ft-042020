@@ -38,7 +38,7 @@ def apply_coupons(cart, coupons)
     coupon_item = find_item_by_name_in_collection(cart_item[:item], coupons)
     
     if coupon_item
-      if cart_item[:count] > coupon_item[:num]
+      if cart_item[:count] >= coupon_item[:num]
         cart_item[:count] -= coupon_item[:num]
         updated_cart << cart_item
         updated_cart << {
