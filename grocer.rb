@@ -68,6 +68,7 @@ def apply_clearance(cart)
     end
     updated_cart << cart_item
   end
+  updated_cart
 end
 
 def checkout(cart, coupons)
