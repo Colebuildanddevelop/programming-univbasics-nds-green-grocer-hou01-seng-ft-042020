@@ -42,7 +42,7 @@ def apply_coupons(cart, coupons)
         cart_item[:count] -= coupon_item[:num]
         updated_cart << cart_item
         updated_cart << {
-          :item => "#{coupon_item[:name]} W/COUPON",
+          :item => "#{coupon_item[:item]} W/COUPON",
           :price => (coupon_item[:cost] / coupon_item[:num]),
           :clearance => cart_item[:clearance],
           :count => coupon_item[:num]
@@ -51,7 +51,7 @@ def apply_coupons(cart, coupons)
         # we have more or == coupons then items in cart
         # ignore original item in place of coupon
         updated_cart << {
-          :item => "#{coupon_item[:name]} W/COUPON",
+          :item => "#{coupon_item[:item]} W/COUPON",
           :price => (coupon_item[:cost] / coupon_item[:num]),
           :clearance => cart_item[:clearance],
           :count => cart_item[:count]
