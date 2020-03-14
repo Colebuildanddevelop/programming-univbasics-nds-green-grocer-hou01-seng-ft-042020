@@ -30,13 +30,25 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  
+  updated_cart = []
   index = 0
   # iterate each coupon
   while coupons[index] do 
     coupon_item_name = coupons[index][:item]
     coupon_item_count = coupons[index][:num]
     coupon_item_price = coupons[index][:cost]
+    
+    find_item_by_name_in_collection(coupon_item_name, cart)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     cart_index = 0
     # search for item in cart 
     while cart[cart_index] do 
