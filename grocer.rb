@@ -44,7 +44,17 @@ def apply_coupons(cart, coupons)
       
       if cart_item_name == coupon_item_name
         ## manipulate cart
-        if coupon_item_count > cart_item_count
+        if coupon_item_count < cart_item_count
+          # reduce cart item count 
+          # add w/ coupon item
+          cart[cart_index][:count] = cart_item_count - coupon_item_count
+          cart << {
+            :item => "#{coupon_item_name} W/COUPON",
+            :price => 
+          }
+          
+        else if 
+          
           
         end
       end
