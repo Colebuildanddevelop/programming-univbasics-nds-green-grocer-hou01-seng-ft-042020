@@ -59,11 +59,14 @@ def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  updated_cart = []
   index = 0
   while cart[index] do 
-    if cart[index][:clearance] == true
-      cart[index][:price] -= (cart[index][:price] * .2)
+    cart_item = cart[index]
+    if cart_item[:clearance] == true
+      cart_item[:price] -= (cart_item[:price] * .2)
     end
+    updated_cart << cart_item
   end
 end
 
