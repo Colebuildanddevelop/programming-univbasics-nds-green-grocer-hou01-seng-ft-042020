@@ -69,6 +69,11 @@ def apply_coupons(cart, coupons)
   updated_cart
 end
 
+cart = 
+
+
+apply_coupons()
+
 def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
