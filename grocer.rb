@@ -34,7 +34,6 @@ def apply_coupons(cart, coupons)
   index = 0
   # iterate each coupon
   while coupons[index] do 
-    puts "test"
     coupon_item = coupons[index]
     cart_item = find_item_by_name_in_collection(coupon_item[:item], cart)
     
