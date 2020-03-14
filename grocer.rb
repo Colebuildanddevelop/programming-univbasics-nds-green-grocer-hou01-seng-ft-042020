@@ -35,7 +35,15 @@ def apply_coupons(cart, coupons)
   # iterate each coupon
   while coupons[index] do 
     coupon_item = coupons[index]
-    cart_item = find_item_by_name_in_collection(coupon_item[:item], cart)
+    inner_index = 0 
+    while cart[inner_index] do 
+      cart_item = cart[inner_index]
+      
+    end 
+    
+    
+    
+    
     
     if cart_item 
       if cart_item[:count] > coupon_item[:num]
