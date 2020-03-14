@@ -56,13 +56,11 @@ def apply_coupons(cart, coupons)
           :clearance => cart_item[:clearance],
           :count => cart_item[:count]
         }        
-        
-        
-        
       end
     else
       updated_cart << cart_item
     end
+    puts cart_item
     index += 1 
   end
   updated_cart
