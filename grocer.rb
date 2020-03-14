@@ -65,6 +65,7 @@ def apply_coupons(cart, coupons)
     end
     index += 1 
   end
+  puts updated_cart
   updated_cart
 end
 
