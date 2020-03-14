@@ -61,7 +61,6 @@ def apply_coupons(cart, coupons)
           
         end
       end
-
       cart_index += 1
     end
     index += 1
