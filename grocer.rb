@@ -60,7 +60,6 @@ def apply_coupons(cart, coupons)
     else
       updated_cart << cart_item
     end
-    puts cart_item
     index += 1 
   end
   updated_cart
@@ -70,9 +69,8 @@ cart = [
   {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 3},
   {:item => "KALE",    :price => 3.00, :clearance => false, :count => 1}
 ]
-
 coupon = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
-apply_coupons(cart, coupon)
+puts apply_coupons(cart, coupon)
 
 def apply_clearance(cart)
   # Consult README for inputs and outputs
