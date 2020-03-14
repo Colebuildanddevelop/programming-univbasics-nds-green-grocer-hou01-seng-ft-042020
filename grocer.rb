@@ -71,6 +71,9 @@ def apply_clearance(cart)
   updated_cart
 end
 
+cart = 
+
+
 def checkout(cart, coupons)
   # Consult README for inputs and outputs
   #
