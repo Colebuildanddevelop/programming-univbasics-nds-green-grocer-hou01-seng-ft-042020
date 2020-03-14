@@ -32,20 +32,12 @@ def apply_coupons(cart, coupons)
   # REMEMBER: This method **should** update cart
   updated_cart = []
   index = 0
-  # iterate each coupon
-  while coupons[index] do 
-    coupon_item = coupons[index]
-    inner_index = 0 
-    while cart[inner_index] do 
-      cart_item = cart[inner_index]
-      
-    end 
+  # iterate each cart item
+  while cart[index] do 
+    cart_item = cart[index]
+    coupon_item = find_item_by_name_in_collection(cart_item[:item], coupons)
     
-    
-    
-    
-    
-    if cart_item 
+    if coupon_item
       if cart_item[:count] > coupon_item[:num]
         cart_item[:count] -= coupon_item[:num]
         updated_cart << cart_item
@@ -67,7 +59,6 @@ def apply_coupons(cart, coupons)
       end
     else
       updated_cart << cart_item
-    end
     index += 1 
   end
   updated_cart
