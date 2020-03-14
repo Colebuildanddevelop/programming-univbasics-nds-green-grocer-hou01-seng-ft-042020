@@ -59,6 +59,7 @@ def apply_coupons(cart, coupons)
       end
     else
       updated_cart << cart_item
+    end
     index += 1 
   end
   updated_cart
