@@ -34,6 +34,7 @@ def apply_coupons(cart, coupons)
   index = 0
   # iterate each coupon
   while coupons[index] do 
+    puts "test"
     coupon_item = coupons[index]
     cart_item = find_item_by_name_in_collection(coupon_item[:name], cart)
     
@@ -72,8 +73,6 @@ cart = [
 ]
 
 coupon = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
-
-
 apply_coupons(cart, coupon)
 
 def apply_clearance(cart)
