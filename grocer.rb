@@ -44,7 +44,6 @@ def apply_coupons(cart, coupons)
     index += 1
   end
   
-  
   updated_array
 end
 
