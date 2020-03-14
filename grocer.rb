@@ -31,20 +31,25 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   
-  updated_array = []
   index = 0
+  # iterate each coupon
   while coupons[index] do 
-    item_name = coupons[index][:name]
-    if (coupons[index][:num] < item_in_cart[:count])
-      item_in_cart[:count] -= coupons[index][:num]
-      coupon_hash = {
+    coupon_item_name = coupons[index][:item]
+    cart_index = 0
+    # search for item in cart 
+    while cart[cart_index] do 
+      cart_item_name = cart[cart_index][:item]
+      cart_item_count = cart[cart_index][:count]
+      
+      if cart_item_name == coupon_item_name
+        ## manipulate cart
         
-      }
+      end
+
+      cart_index += 1
     end
     index += 1
   end
-  
-  updated_array
 end
 
 def apply_clearance(cart)
